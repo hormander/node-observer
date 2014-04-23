@@ -1,15 +1,13 @@
 Observer
 -------------
 
-This is a observer pattern module
+This is an observer pattern module
 
 ## Install
 
 ```bash
 npm install node-observer
 ```
-
-## Introduction
 
 ## Example
 
@@ -35,8 +33,6 @@ File: hello.js
 
 var observer = require("node-observer");
 
-var message;
-
 var Hello = function() { };
 
 Hello.prototype.send = function() {
@@ -46,15 +42,30 @@ Hello.prototype.send = function() {
 module.exports = new Hello();
 ```
 
+Run
+
+```bash
+node app.js
+```
+
 ## API
 
-### subscribe(object, event, callaback)
+### subscribe(object, event, callback)
+
+object:object, event:string, callback:function
+
 subscribe event
 
-### unsubscribe(object, event, callaback)
+### unsubscribe(object, event) (WORK IN PROGRESS)
+
+object:object, event:string
+
 unsubscribe event
 
 ### send(object, event, data)
+
+object:object, event:string, data:object
+
 send event 'event' with data 'data'
 
 ## Contributors
