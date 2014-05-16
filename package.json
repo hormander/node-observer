@@ -1,14 +1,11 @@
 {
-  "author": {
-    "name": "Marco Murdocca",
-    "url": "marco.murdocca@xenialab.it"
-  },
+  "author": "Marco Murdocca (marco.murdocca@xenialab.it)",
   "name": "node-observer",
   "description": "Observer pattern implementation",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/hormander/node-observer"
+  	"type" : "git",
+    	"url": "https://github.com/hormander/node-observer"
   },
   "main": "./lib/observer.js",
   "keywords": [
@@ -25,16 +22,5 @@
     "node": "*"
   },
   "license": "GPL",
-  "homepage": "https://github.com/hormander/node-observer",
-  "readme": "Observer\n-------------\n\nThis is an observer pattern module\n\n## Install\n\n```bash\nnpm install node-observer\n```\n\n## Example\n\nMain file: app.js\n\n```app.js\n\"use strict\";\n\nvar observer = require(\"node-observer\");\nvar hello = require(\"./hello\");\n\nobserver.subscribe(this, \"HELLO\", function(who, data) {\n\tconsole.log(data);\n});\n\nhello.send();\n```\n\nFile: hello.js\n\n```hello.js\n\"use strict\";\n\nvar observer = require(\"node-observer\");\n\nvar Hello = function() { };\n\nHello.prototype.send = function() {\n\tobserver.send(this, \"HELLO\", \"hello world!!!\");\n};\n\nmodule.exports = new Hello();\n```\n\nRun\n\n```bash\nnode app.js\n```\n\n## API\n\n### subscribe(object, event, callback)\n\nobject:object, event:string, callback:function\n\nsubscribe event\n\n### unsubscribe(object, event) (WORK IN PROGRESS)\n\nobject:object, event:string\n\nunsubscribe event\n\n### send(object, event, data)\n\nobject:object, event:string, data:object\n\nsend event 'event' with data 'data'\n\n## Contributors\n\n- [Marco Murdocca aka `hormander`](https://github.com/hormander)\n",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/hormander/node-observer/issues"
-  },
-  "_id": "node-observer@0.2.6",
-  "dist": {
-    "shasum": "9bcc6179739082bf5a578867b505c6be67cdbe1b"
-  },
-  "_from": "node-observer@*",
-  "_resolved": "https://registry.npmjs.org/node-observer/-/node-observer-0.2.6.tgz"
+  "homepage": "https://github.com/hormander/node-observer"
 }

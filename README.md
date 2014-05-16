@@ -56,7 +56,7 @@ object:object, event:string, callback:function
 
 subscribe event
 
-### unsubscribe(object, event) (WORK IN PROGRESS)
+### unsubscribe(object, event) 
 
 object:object, event:string
 
